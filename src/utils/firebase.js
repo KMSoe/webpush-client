@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getMessaging, getToken, onMessage } from "firebase/messaging";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -37,7 +38,7 @@ export const requestPermission = () => {
 
                         console.log('Client Token: ', currentToken);
 
-                        subscribeToTopic();
+                        //    messaging.getInstance().subscribeToTopic("news");
                     } else {
 
                         console.log('Failed to generate the app registration token.');

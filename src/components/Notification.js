@@ -7,6 +7,7 @@ function Notification() {
   useEffect(() => {
     requestPermission();
     const unsubscribe = onMessageListener().then((payload) => {
+        console.log(payload);
       setNotification({
         title: payload?.notification?.title,
         body: payload?.notification?.body,
